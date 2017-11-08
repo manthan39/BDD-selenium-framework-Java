@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -21,14 +22,23 @@ import testBase.testBase;
 
 public class TC001_VerifyHomepage extends testBase  {
 	
-	Homepage hmpage;
-	testBase tb;
+//	Homepage hmpage = PageFactory.initElements(driver, Homepage.class);
+		
+	//public WebDriver driver= null;
+
+		Homepage hmpage;
+
+
+
+
+	
 	@BeforeClass
 	public  void setUp(){
-		tb=new testBase();
+		
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
 		driver=new FirefoxDriver();
-		driver.get("http://www.google.com");
+		driver.manage().window().maximize();
+		driver.get("http://www.phptravels.net");
 		
 		
 
@@ -36,29 +46,28 @@ public class TC001_VerifyHomepage extends testBase  {
 	
 
 	
-//	@Test(priority=1)
-	public void Verifyloginwithvalidcredentials(){
-		hmpage.clickonMyAcc();
-		hmpage.clickonLoginBtn();
-		hmpage.VerifyLogin("user@phptravels.com", "demouser");
-		Assert.assertEquals(hmpage.getvalidlogintext(), "Hi, Johny Smith");
-	        }
-	
-//	@Test(priority=2)
-	public void VerifyLogoutBtn(){
-		Assert.assertEquals(hmpage.verifylogoutDisplay(), true);
-	} 
-	
-//	@Test (priority=3)
-	public void Verifylogout(){
-		hmpage.clickonLogout();
-	}
+	@Test(priority=1)
 
-	@Test
-	public void searchtest(){
-		hmpage.testclick();
-	}
+	public void testvisa(){
+		hmpage = new Homepage(driver);
+	hmpage.clickonvisaBtn();
+	hmpage.enteremail();
+	hmpage.EnterArrivalDate();
+	hmpage.selectcountrycode();
+	hmpage.EnterPhoneNumber();
+	hmpage.EnterFirstName();
+	hmpage.EnterLastName();
+	hmpage.selectNationality();
+	hmpage.EnterBirthday();
+	hmpage.selectCountryofBirth();
+	hmpage.selectGender();
 	
+	
+	
+	
+	
+	}
+		
 	 	
 	
 	@AfterClass

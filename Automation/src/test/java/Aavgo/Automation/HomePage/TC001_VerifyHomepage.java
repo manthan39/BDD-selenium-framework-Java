@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.jboss.netty.util.Timeout;
+import org.omg.CORBA.TIMEOUT;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,17 +54,19 @@ public class TC001_VerifyHomepage extends testBase  {
 		hmpage = new Homepage(driver);
 	hmpage.clickonvisaBtn();
 	hmpage.enteremail();
-	hmpage.EnterArrivalDate();
-	hmpage.selectcountrycode();
+	//hmpage.EnterArrivalDate();
+	//hmpage.selectcountrycode();
 	hmpage.EnterPhoneNumber();
 	hmpage.EnterFirstName();
 	hmpage.EnterLastName();
-	hmpage.selectNationality();
+	//hmpage.selectNationality();
 	hmpage.EnterBirthday();
 	hmpage.selectCountryofBirth();
 	hmpage.selectGender();
-	
-	
+	hmpage.EnterpassportNumber();
+	hmpage.EnterpassportIssuedDetail();
+	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	hmpage.EnterpassportExpirationDetail();
 	
 	
 	
@@ -70,7 +74,7 @@ public class TC001_VerifyHomepage extends testBase  {
 		
 	 	
 	
-	@AfterClass
+	//@AfterClass
 	public  void endTest(){
 		driver.close();
 		

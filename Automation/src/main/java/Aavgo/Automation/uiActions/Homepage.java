@@ -2,13 +2,17 @@ package Aavgo.Automation.uiActions;
 
 
 import java.awt.RenderingHints.Key;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Aavgo.Automation.HomePage.TC001_VerifyHomepage;
 import testBase.testBase;
@@ -73,9 +77,31 @@ public class Homepage extends testBase   {
 	@FindBy(xpath="html/body/div[8]/div[1]/table/tbody/tr[1]/td[4]")	
 	WebElement SelectDate;
 	
-
+	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[7]/input")	
+	WebElement PassportNumberField;
 	
+	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[8]/input")	
+	WebElement PassportIssuedField;
+	
+	
+	@FindBy(xpath="//*[@id='dp_month']")
+	WebElement Monthdrpdwn; 
+	
+	@FindBy(xpath="//*[@id='dp_day']")
+	WebElement daydrpdwn; 
+	
+	@FindBy(xpath="//*[@id='dp_year']")
+	WebElement yeardrpdwn; 
 
+	@FindBy(xpath="//*[@id='dp_save']")
+	WebElement SaveBtn;
+	
+	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[9]/input")
+	WebElement PassportExpirationField;
+	
+	@FindBy(xpath="//*[@id='ivisa-subtotal-section']/div[3]/div/div[3]/button")
+	WebElement NextBtn;
+	
 public Homepage(WebDriver driver){
 	this.driver=driver;
     PageFactory.initElements(driver, this);
@@ -109,8 +135,16 @@ public void enteremail(){
 }
 
 public void EnterArrivalDate(){
-	Emailfield.sendKeys(Keys.TAB);
-	SelectDate.click();
+	
+	List<WebElement> columns=ArrivalDate.findElements(By.tagName("td"));
+
+	for (WebElement cell: columns){
+	   //Select 13th Date 
+	   if (cell.getText().equals("13")){
+	      cell.findElement(By.linkText("13")).click();
+	      break;
+	   }
+	   }
 
 }
 
@@ -151,9 +185,42 @@ public void selectGender(){
 	drpdwn.selectByVisibleText("Male");
 }
 
-public void clickonLogout(){
-	UserBtn.click();
-	LogoutBtn.click();
+
+public void EnterpassportNumber(){
+	PassportNumberField.sendKeys("23423534534234");
+}
+
+
+
+public void EnterpassportIssuedDetail(){
+	PassportIssuedField.click();
+	Select month = new Select(Monthdrpdwn);
+	month.selectByIndex(1);
+	Select day= new Select(daydrpdwn);
+	day.selectByIndex(2);
+	Select year= new Select(yeardrpdwn);
+	year.selectByVisibleText("2017");
+	SaveBtn.click();
+}
+
+
+public void EnterpassportExpirationDetail(){
+	
+	
+	PassportIssuedField.sendKeys(Keys.TAB);
+	Select month = new Select(Monthdrpdwn);
+	month.selectByIndex(5);
+	Select day= new Select(daydrpdwn);
+	day.selectByIndex(2);
+	Select year= new Select(yeardrpdwn);
+	year.selectByVisibleText("2022");
+	SaveBtn.click();
+}
+
+
+public void clickonNext(){
+	NextBtn.click();
+	
 }
 
 

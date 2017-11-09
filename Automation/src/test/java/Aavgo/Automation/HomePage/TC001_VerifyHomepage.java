@@ -17,6 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Aavgo.Automation.uiActions.Homepage;
@@ -49,25 +50,27 @@ public class TC001_VerifyHomepage extends testBase  {
 
 	
 	@Test(priority=1)
-
+	
+	@Parameters({"mailid","mobileNo","FirstName","LastName"})
+	
 	public void testvisa(){
 		hmpage = new Homepage(driver);
-	hmpage.clickonvisaBtn();
-	hmpage.enteremail();
-	//hmpage.EnterArrivalDate();
-	//hmpage.selectcountrycode();
-	hmpage.EnterPhoneNumber();
-	hmpage.EnterFirstName();
-	hmpage.EnterLastName();
-	//hmpage.selectNationality();
-	hmpage.EnterBirthday();
-	hmpage.selectCountryofBirth();
-	hmpage.selectGender();
-	hmpage.EnterpassportNumber();
-	hmpage.EnterpassportIssuedDetail();
-	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	hmpage.EnterpassportExpirationDetail();
-	
+		hmpage.clickonvisaBtn();
+		hmpage.enteremail().sendKeys("mailid");
+		//hmpage.EnterArrivalDate();
+		hmpage.selectcountrycode();
+		hmpage.EnterPhoneNumber().sendKeys("mobileNo");
+		hmpage.EnterFirstName().sendKeys("firstName");
+		hmpage.EnterLastName().sendKeys("lastName");
+		hmpage.selectNationality();
+		hmpage.SelectBirthday();
+		hmpage.selectCountryofBirth();
+		hmpage.selectGender();
+		hmpage.EnterpassportNumber();
+		hmpage.EnterpassportIssuedDetail();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		hmpage.EnterpassportExpirationDetail();
+		
 	
 	
 	}

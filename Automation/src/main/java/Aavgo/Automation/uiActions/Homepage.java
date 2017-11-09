@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
 
 import Aavgo.Automation.HomePage.TC001_VerifyHomepage;
 import testBase.testBase;
@@ -102,6 +103,10 @@ public class Homepage extends testBase   {
 	@FindBy(xpath="//*[@id='ivisa-subtotal-section']/div[3]/div/div[3]/button")
 	WebElement NextBtn;
 	
+	@FindBy(xpath="//span[contains(@class, 'dial-code') and text() = '+91']")
+	WebElement IndianCountryCode;
+	
+	
 public Homepage(WebDriver driver){
 	this.driver=driver;
     PageFactory.initElements(driver, this);
@@ -110,14 +115,14 @@ public Homepage(WebDriver driver){
 	
 }
 
-public void VerifyLogin(String email,String passwd){
+/*public void VerifyLogin(String email,String passwd){
 
 	
 	Emailfield.sendKeys(email);
 	Passwdfield.sendKeys(passwd);
 	Passwdfield.sendKeys(Keys.ENTER);
 	
-}
+}*/
 
 public void clickonvisaBtn(){
 
@@ -129,8 +134,9 @@ public void clickonLoginBtn(){
 	LoginBtn.click();
 }
 
-public void enteremail(){
-	Emailfield.sendKeys("Test@123.com");
+
+public  WebElement enteremail(){
+	return Emailfield;
 
 }
 
@@ -149,30 +155,43 @@ public void EnterArrivalDate(){
 }
 
 public void selectcountrycode(){
-	Select drpdwn = new Select(CountryCode);
-	drpdwn.selectByVisibleText("+91");
+	/*Select drpdwn = new Select(CountryCode);
+	drpdwn.selectByVisibleText("+91");*/
+	CountryCode.click();
+	IndianCountryCode.click();
 }
 
-public void EnterPhoneNumber(){
-	PhoneNumberField.sendKeys("70430123404");	
+
+public WebElement EnterPhoneNumber(){
+	PhoneNumberField.clear();
+	return 	PhoneNumberField;	
 }
 
-public void EnterFirstName(){
-	FirstName.sendKeys("Hari");	
+
+public  WebElement EnterFirstName(){
+	return FirstName;
 }
 
-public void EnterLastName(){
-	LastName.sendKeys("Sandu");	
+
+public  WebElement EnterLastName(){
+	return LastName;	
 }
 
 
 public void selectNationality(){
 	Select drpdwn = new Select(Nationalitydrpdown);
-	drpdwn.selectByVisibleText("India (IN)");
+	drpdwn.selectByValue("CA");
 }
 
-public void EnterBirthday(){
-	PhoneNumberField.sendKeys("19940908");	
+public void SelectBirthday(){
+	BirthdayField.click();
+	Select month = new Select(Monthdrpdwn);
+	month.selectByIndex(1);
+	Select day= new Select(daydrpdwn);
+	day.selectByIndex(2);
+	Select year= new Select(yeardrpdwn);
+	year.selectByVisibleText("2017");
+	SaveBtn.click();
 }
 public void selectCountryofBirth(){
 	Select drpdwn = new Select(CountryofBirth);

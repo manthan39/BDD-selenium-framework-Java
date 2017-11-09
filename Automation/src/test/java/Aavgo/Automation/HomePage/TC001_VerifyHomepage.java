@@ -34,14 +34,15 @@ public class TC001_VerifyHomepage extends testBase  {
 
 
 
-	
+	//@Parameters({"url"})
+		
 	@BeforeClass
 	public  void setUp(){
 		
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
 		driver=new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://www.phptravels.net");
+		driver.get("http://www.phptravels.net/");
 		
 		
 
@@ -53,24 +54,27 @@ public class TC001_VerifyHomepage extends testBase  {
 	
 	@Parameters({"mailid","mobileNo","FirstName","LastName"})
 	
-	public void testvisa(){
+	public void testvisa(String strMailID,String strMobNo,String strFirstName,String strLastName){
 		hmpage = new Homepage(driver);
 		hmpage.clickonvisaBtn();
-		hmpage.enteremail().sendKeys("mailid");
+		hmpage.enteremail().sendKeys(strMailID);
 		//hmpage.EnterArrivalDate();
 		hmpage.selectcountrycode();
-		hmpage.EnterPhoneNumber().sendKeys("mobileNo");
-		hmpage.EnterFirstName().sendKeys("firstName");
-		hmpage.EnterLastName().sendKeys("lastName");
+		hmpage.EnterPhoneNumber().sendKeys(strMobNo);
+		hmpage.EnterFirstName().sendKeys(strFirstName);
+		hmpage.EnterLastName().sendKeys(strLastName);
 		hmpage.selectNationality();
 		hmpage.SelectBirthday();
 		hmpage.selectCountryofBirth();
 		hmpage.selectGender();
 		hmpage.EnterpassportNumber();
 		hmpage.EnterpassportIssuedDetail();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		hmpage.EnterpassportExpirationDetail();
-		
+		hmpage.selectsupportingDoc();
+		hmpage.SelectCountrythatIssued();
+		hmpage.SelectVisaExpiry();
+		hmpage.clickcheckbox();
 	
 	
 	}

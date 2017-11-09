@@ -63,7 +63,7 @@ public class Homepage extends testBase   {
 	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[2]/input")	
 	WebElement LastName;
 	
-	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[2]/input")	
+	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[3]/select")	
 	WebElement Nationalitydrpdown;
 	
 	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[4]/input")	
@@ -105,6 +105,19 @@ public class Homepage extends testBase   {
 	
 	@FindBy(xpath="//span[contains(@class, 'dial-code') and text() = '+91']")
 	WebElement IndianCountryCode;
+	
+	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[3]/div[1]/select")
+	WebElement SupportingDoc;
+	
+	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[3]/div[2]/select")
+	WebElement CountrythatIssued;
+	
+	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[3]/div[3]/input")
+	WebElement VisaExpiry;
+	
+	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[4]/div/input")
+	WebElement FirstCheckbox;
+	
 	
 	
 public Homepage(WebDriver driver){
@@ -179,8 +192,8 @@ public  WebElement EnterLastName(){
 
 
 public void selectNationality(){
-	Select drpdwn = new Select(Nationalitydrpdown);
-	drpdwn.selectByValue("CA");
+	Nationalitydrpdown.sendKeys(Keys.ARROW_DOWN);
+		
 }
 
 public void SelectBirthday(){
@@ -194,14 +207,15 @@ public void SelectBirthday(){
 	SaveBtn.click();
 }
 public void selectCountryofBirth(){
-	Select drpdwn = new Select(CountryofBirth);
-	drpdwn.selectByVisibleText("India (IN)");
+	/*Select drpdwn1 = new Select(CountryofBirth);
+	drpdwn1.selectByVisibleText("Andorra (AD)");*/
+	CountryofBirth.sendKeys(Keys.ARROW_DOWN);
 }
 
 
 public void selectGender(){
-	Select drpdwn = new Select(Genderdrpdwn);
-	drpdwn.selectByVisibleText("Male");
+	Select drpdwn2 = new Select(Genderdrpdwn);
+	drpdwn2.selectByVisibleText("Male");
 }
 
 
@@ -236,6 +250,36 @@ public void EnterpassportExpirationDetail(){
 	SaveBtn.click();
 }
 
+public void selectsupportingDoc(){
+	SupportingDoc.sendKeys(Keys.ARROW_DOWN);
+		
+}
+
+public void SelectCountrythatIssued(){
+	CountrythatIssued.sendKeys(Keys.ARROW_DOWN);
+		
+}
+public void SelectVisaExpiry(){
+	/*String press = Keys.chord(Keys.SHIFT,Keys.ENTER); 
+	FirstCheckbox.sendKeys(press);*/
+	VisaExpiry.clear();
+	Select month = new Select(Monthdrpdwn);
+	month.selectByIndex(5);
+	Select day= new Select(daydrpdwn);
+	day.selectByIndex(2);
+	Select year= new Select(yeardrpdwn);
+	year.selectByVisibleText("2022");
+	SaveBtn.click();
+}
+
+public void clickcheckbox(){
+	List<WebElement> els = driver.findElements(By.xpath("//input[@type='checkbox']"));
+	for ( WebElement el : els ) {
+	    if ( !el.isSelected() ) {
+	        el.click();
+	    }
+	}
+}
 
 public void clickonNext(){
 	NextBtn.click();

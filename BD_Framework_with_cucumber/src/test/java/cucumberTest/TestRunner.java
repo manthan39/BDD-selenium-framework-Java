@@ -7,7 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	plugin={"pretty"},
+	plugin = {"html:C:/Users/mvbhatiya/Desktop/cucumber-html-report" },
+	// for json format "json:C:/Users/mvbhatiya/Desktop/cucumber-json-report.json"
 	features = {"src\\main\\java\\resources"},
 	glue={"stepDefination"}
 )

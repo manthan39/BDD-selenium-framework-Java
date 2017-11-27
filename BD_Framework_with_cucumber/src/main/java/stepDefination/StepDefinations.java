@@ -36,9 +36,10 @@ public class StepDefinations extends testBase {
 
 	@Then("^Message displayed registration Successfully$")
 	public void message_displayed_registration_Successfully() throws Throwable {
-		System.out.println("Text is"+hmpage.verifyLoogedinMsg());
-		Assert.assertEquals(hmpage.verifyLoogedinMsg(), "You're logged in!!");	 
-	//	throw new PendingException();
+		/*System.out.println("Text is"+hmpage.verifyLogoutBtnMsg());
+		Assert.assertEquals(hmpage.verifyLogoutBtnMsg(), "You're logged in!!");*/	 
+/*	hmpage.ClickonLogoutBtn();*/
+		hmpage.CloseBrowser();
 	}
 
 	

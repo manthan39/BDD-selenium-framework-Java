@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import locators.HomepageLocator.IautoLocator;
 import testBase.testBase;
 
@@ -21,8 +22,8 @@ public class Homepage extends testBase {
 	@FindBy(css = IautoLocator.loginBtn)
 	private WebElement LoginBtn;
 
-	@FindBy(css = IautoLocator.LoggedinMsg)
-	private WebElement LoggedinMsg;
+	@FindBy(xpath = IautoLocator.LogoutBtn)
+	private WebElement LogoutBtn;
 
 	public void EnterUsername() {
 		usernamefield.sendKeys("angular");
@@ -45,8 +46,17 @@ public class Homepage extends testBase {
 
 	}
 
-	public String verifyLoogedinMsg() {
-		return LoggedinMsg.getText();
+	public void CloseBrowser() {
+		driver.close();
+
+	}
+
+	public  String verifyLogoutBtnMsg() {
+		return LogoutBtn.getAttribute("href");
+	}
+	
+	public void ClickonLogoutBtn() {
+		LogoutBtn.click();
 	}
 
 	public Homepage(WebDriver driver) {

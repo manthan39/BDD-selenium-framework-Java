@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,22 +26,22 @@ public class CalculatorPage extends testBase {
 	@FindBy(xpath = IautoLocator.SelectSymbol)
 	private WebElement SelectSymbol;
 
-	@FindBy(css = IautoLocator.GoBtn)
+	@FindBy(id = IautoLocator.GoBtn)
 	private WebElement GoBtn;
 
 	public void EnterFirstInput(String input) {
 		firstInput.sendKeys(input);
 	}
 
-	public void EnterSecondInput(String input) {
-		firstInput.sendKeys(input);
+	public void EnterSecondInput(String input1) {
+		SecondInput.sendKeys(input1);
 	}
 
 	public void SelectFromDropDown(String symbol) {
 		Select sc = new Select(SelectSymbol);
 		sc.selectByVisibleText(symbol);
 	}
-
+	
 	public void clickOnGoBtn() {
 		GoBtn.click();
 	}

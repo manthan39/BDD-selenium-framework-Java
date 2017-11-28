@@ -28,11 +28,12 @@ public class LoginpageTestSteps extends testBase {
 		/* throw new PendingException(); */
 	}
 
-	@When("^User enters valid registation details$")
-	public void user_enters_registation_details() throws Throwable {
+	@When("^User enters valid registration details$")
+	public void user_enters_registration_details() throws Throwable {
 		hmpage.EnterUsername("angular");
 		hmpage.Enterpassword("password");
 		hmpage.EnterUsername_mandatory("angular");
+		Thread.sleep(2000);
 		hmpage.ClickonLoginBtn();
 
 	}
@@ -48,11 +49,12 @@ public class LoginpageTestSteps extends testBase {
 		 
 		}
 
-	@When("^User enters Invalid registation details$")
-	public void user_enters_Invalid_registation_details() throws Throwable {
+	@When("^User enters Invalid registration details$")
+	public void user_enters_Invalid_registration_details() throws Throwable {
 		hmpage.EnterUsername("invalid username");
 		hmpage.Enterpassword("InvalidPasswd");
 		hmpage.EnterUsername_mandatory("invalid username");
+		Thread.sleep(2000);
 		hmpage.ClickonLoginBtn();
 
 	}

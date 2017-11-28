@@ -3,6 +3,10 @@
  */
 package stepDefination;
 
+import javax.net.ssl.HostnameVerifier;
+
+import org.openqa.selenium.interactions.Actions;
+
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -16,8 +20,8 @@ import testBase.testBase;
  */
 public class CalculatorpageTestSteps extends testBase {
 
-	String FirstInput = "10";
-	String SecondInput = "20";
+	String FirstInput = "50";
+	String SecondInput = "30";
 
 	CalculatorPage calpage = new CalculatorPage(driver);
 
@@ -33,19 +37,19 @@ public class CalculatorpageTestSteps extends testBase {
 
 	}
 
-	@When("^user enter second input$")
-	public void user_enter_second_input() throws Throwable {
-		calpage.EnterSecondInput(SecondInput);
-
+	@When("^User enter second input$")
+	public   void user_enter_second_input() throws Throwable {
+		 calpage.EnterSecondInput(SecondInput);
+		 
 	}
 
-	@When("^user select symbol$")
+	@When("^User select symbol$")
 	public void user_select_symbol() throws Throwable {
-		calpage.SelectFromDropDown("+");
+		calpage.SelectFromDropDown("-");
 
 	}
 
-	@When("^user click on Go button$")
+	@When("^User click on Go button$")
 	public void user_click_on_Go_button() throws Throwable {
 		calpage.clickOnGoBtn();
 

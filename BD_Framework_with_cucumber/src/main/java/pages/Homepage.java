@@ -8,6 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import locators.HomepageLocator.IautoLocator;
 import testBase.testBase;
 
+/**
+ * @author mvbhatiya
+ *
+ */
 public class Homepage extends testBase {
 
 	@FindBy(xpath = IautoLocator.usernamefield)
@@ -25,16 +29,19 @@ public class Homepage extends testBase {
 	@FindBy(xpath = IautoLocator.LogoutBtn)
 	private WebElement LogoutBtn;
 
-	public void EnterUsername() {
-		usernamefield.sendKeys("angular");
+	@FindBy(xpath = IautoLocator.InvalidMsgTxt)
+	private WebElement InvalidMsgTxt;
+
+	public void EnterUsername(String username) {
+		usernamefield.sendKeys(username);
 	}
 
-	public void Enterpassword() {
-		passwdfield.sendKeys("password");
+	public void Enterpassword(String password) {
+		passwdfield.sendKeys(password);
 	}
 
-	public void EnterUsername_mandatory() {
-		username_mandatory1.sendKeys("angular");
+	public void EnterUsername_mandatory(String username_mandatory) {
+		username_mandatory1.sendKeys(username_mandatory);
 	}
 
 	public void ClickonLoginBtn() {
@@ -51,12 +58,16 @@ public class Homepage extends testBase {
 
 	}
 
-	public  String verifyLogoutBtnMsg() {
+	public String verifyLogoutBtnMsg() {
 		return LogoutBtn.getAttribute("href");
 	}
-	
+
 	public void ClickonLogoutBtn() {
 		LogoutBtn.click();
+	}
+
+	public String GetInvalidMsg() {
+		return InvalidMsgTxt.getText();
 	}
 
 	public Homepage(WebDriver driver) {

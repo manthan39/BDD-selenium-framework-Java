@@ -54,7 +54,7 @@ public class Homepage extends testBase {
 	}
 
 	public void CloseBrowser() {
-		driver.close();
+		driver.quit();
 
 	}
 

@@ -44,6 +44,12 @@ public class CalculatorPage extends testBase {
 	public void clickOnGoBtn() {
 		GoBtn.click();
 	}
+	
+	public void Loadurl(){
+		driver.get("http://www.way2automation.com/angularjs-protractor/calc/");
+	}
+	
+	
 
 	public CalculatorPage(WebDriver driver) {
 		this.driver = driver;

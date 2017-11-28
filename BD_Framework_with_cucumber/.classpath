@@ -33,5 +33,15 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="src" path="/Automation"/>
+	<classpathentry kind="lib" path="D:/Eclipse/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mvbhatiya/.m2/repository/info/cukes/cucumber-java/1.2.4/cucumber-java-1.2.4.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="info.cukes"/>
+			<attribute name="maven.artifactId" value="cucumber-java"/>
+			<attribute name="maven.version" value="1.2.4"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

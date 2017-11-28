@@ -1,6 +1,7 @@
 package stepDefination;
 
-import cucumber.api.PendingException;
+import java.util.NoSuchElementException;
+
 import org.junit.Assert;
 
 import cucumber.api.java.en.Given;
@@ -10,11 +11,12 @@ import pages.Homepage;
 import testBase.testBase;
 
 
+
 /**
  * @author mvbhatiya
  *
  */
-public class StepDefinations extends testBase {
+public class LoginpageTestSteps extends testBase {
 
 	Homepage hmpage = new Homepage(driver);
 
@@ -37,14 +39,14 @@ public class StepDefinations extends testBase {
 
 	@Then("^Message displayed registration Successfully$")
 	public void message_displayed_registration_Successfully() throws Throwable {
-		/*
-		 * System.out.println("Text is"+hmpage.verifyLogoutBtnMsg());
-		 * Assert.assertEquals(hmpage.verifyLogoutBtnMsg(),
-		 * "You're logged in!!");
-		 */
-		/* hmpage.ClickonLogoutBtn(); */
-		/* hmpage.CloseBrowser(); */
-	}
+		
+		try{
+		 /*hmpage.verifyLogoutBtnMsg();*/
+	} catch (NoSuchElementException e) {
+	    System.out.println("Element Not Found");
+	}	 
+		 
+		}
 
 	@When("^User enters Invalid registation details$")
 	public void user_enters_Invalid_registation_details() throws Throwable {
@@ -57,9 +59,23 @@ public class StepDefinations extends testBase {
 
 	@Then("^Message displayed enter valid credentials$")
 	public void message_displayed_enter_valid_credentials() throws Throwable {
-		Assert.assertEquals(null, "Username or password is correct", "Username or password is incorrect");
+	try{
+		/*hmpage.GetInvalidMsg();*/
+		Assert.assertEquals("test", "bug");
+	} catch (NoSuchElementException e) {
+	    System.out.println("Element Not Found");
+	}
+	}
+	
+	@Then("^close the browser$")
+	public void close_the_browser() throws Throwable {
 		hmpage.CloseBrowser();
 
 	}
+	
+	
+
+	
+
 
 }

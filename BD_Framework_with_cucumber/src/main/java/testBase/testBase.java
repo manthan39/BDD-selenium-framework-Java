@@ -1,6 +1,4 @@
 package testBase;
-
-import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -35,7 +33,7 @@ public class testBase {
 			 */
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
-			// work with chrome vrowser Version 62.0.3202.94
+			// work with chrome browser Version 62.0.3202.94
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}

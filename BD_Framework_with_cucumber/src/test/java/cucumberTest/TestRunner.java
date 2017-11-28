@@ -11,13 +11,16 @@ import cucumber.api.junit.Cucumber;
  */
 
 @RunWith(Cucumber.class)
-@CucumberOptions(strict = false,
-
-		plugin = { "pretty", "json:target/cucumber.json" }, tags = { "~@ignore" },
+@CucumberOptions(
+		strict = false,
+		plugin = { "pretty", "json:target/cucumber.json"}, 
+		tags = "@smoke, @regression" ,
 
 		// for json format
 		// "json:C:/Users/mvbhatiya/Desktop/cucumber-json-report.json"
-		features = { "src\\main\\java\\resources" }, glue = { "stepDefination" })
+		features = { "src\\main\\java\\resources"}, 
+		glue = { "stepDefination" }
+		)
 public class TestRunner {
 
 }

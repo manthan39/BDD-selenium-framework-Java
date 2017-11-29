@@ -30,10 +30,12 @@ public class CalculatorPage extends testBase {
 	private WebElement GoBtn;
 
 	public void EnterFirstInput(String input) {
+		firstInput.clear();
 		firstInput.sendKeys(input);
 	}
 
 	public void EnterSecondInput(String input1) {
+		SecondInput.clear();
 		SecondInput.sendKeys(input1);
 	}
 

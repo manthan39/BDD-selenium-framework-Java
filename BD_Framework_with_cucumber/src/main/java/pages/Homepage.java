@@ -33,14 +33,17 @@ public class Homepage extends testBase {
 	private WebElement InvalidMsgTxt;
 
 	public void EnterUsername(String username) {
+		usernamefield.clear();
 		usernamefield.sendKeys(username);
 	}
 
 	public void Enterpassword(String password) {
+		passwdfield.clear();
 		passwdfield.sendKeys(password);
 	}
 
 	public void EnterUsername_mandatory(String username_mandatory) {
+		username_mandatory1.clear();
 		username_mandatory1.sendKeys(username_mandatory);
 	}
 

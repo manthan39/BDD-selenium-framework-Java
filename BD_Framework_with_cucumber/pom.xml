@@ -100,17 +100,25 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.3</version>
+        <version>3.7.0</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.18.1</version>     
+        <version>2.18.1</version> 
+          <configuration>
+          <!-- or whatever version you use -->
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>    
       </plugin>
       <plugin>
         <groupId>net.masterthought</groupId>
         <artifactId>maven-cucumber-reporting</artifactId>
         <version>3.12.0</version>
+        <configuration>
+        <testFailureIgnore>true</testFailureIgnore>
+        </configuration>
         <executions>
           <execution>
             <id>execution</id>
@@ -119,12 +127,11 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <projectName>cucumber-jvm-example</projectName>
+              <projectName>BD_Framework_with_cucumber</projectName>
               <outputDirectory>${project.build.directory}/site/cucumber-reports</outputDirectory>
               <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
               <skippedFails>true</skippedFails>
               <enableFlashCharts>false</enableFlashCharts>
-              <buildNumber>42</buildNumber>
             </configuration>
           </execution>
         </executions>

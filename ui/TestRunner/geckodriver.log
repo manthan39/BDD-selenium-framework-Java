@@ -1,0 +1,7 @@
+1513146515474	geckodriver	INFO	Listening on 127.0.0.1:62447
+1513146517466	mozprofile::profile	INFO	Using profile path C:\Users\MVBHAT~1\AppData\Local\Temp\rust_mozprofile.x9XWiL1OHfGO
+1513146517484	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1513146517515	geckodriver::marionette	INFO	Connecting to Marionette on localhost:62453
+1513146518837	Marionette	INFO	Listening on port 62453
+JavaScript warning: http://code.jquery.com/jquery-2.0.3.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1513145857695	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error

@@ -1,0 +1,23 @@
+1512711179791	geckodriver	INFO	Listening on 127.0.0.1:59321
+1512711181819	mozprofile::profile	INFO	Using profile path C:\Users\MVBHAT~1\AppData\Local\Temp\rust_mozprofile.vBqvvunSiy8j
+1512711181834	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1512711181834	geckodriver::marionette	INFO	Connecting to Marionette on localhost:59327
+1512711183598	Marionette	INFO	Listening on port 59327
+JavaScript warning: http://code.jquery.com/jquery-2.0.3.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1512642043330	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+or
+r: angular is undefined
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-messages.js, line 10: TypeError: angular is undefined
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/angular-formly/7.2.3/formly.js, line 188: TypeError: angular is undefined
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/angular-formly-templates-bootstrap/6.1.5/angular-formly-templates-bootstrap.js, line 98: TypeError: angular is undefined
+JavaScript error: http://www.way2automation.com/angularjs-protractor/registeration/modules/authentication/services.js, line 117: ReferenceError: angular is not defined
+JavaScript error: http://www.way2automation.com/angularjs-protractor/registeration/modules/authentication/controllers.js, line 41: ReferenceError: angular is not defined
+JavaScript error: http://www.way2automation.com/angularjs-protractor/registeration/modules/home/controllers.js, line 4: ReferenceError: angular is not defined
+JavaScript error: http://www.way2automation.com/angularjs-protractor/registeration/scripts/app.js, line 56: ReferenceError: angular is not defined
+ of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: https://tpc.googlesyndication.com/pagead/js/r20171113/r20110914/activeview/osd_listener.js, line 1: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+ets-cdn.github.com/assets/frameworks-b53961585f3dc5ecd0171bc7dd9612966ccb53ef613345c0f78be6f4fb2fbf74.js, line 1: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: https://assets-cdn.github.com/assets/frameworks-b53961585f3dc5ecd0171bc7dd9612966ccb53ef613345c0f78be6f4fb2fbf74.js, line 1: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript warning: https://assets-cdn.github.com/assets/frameworks-b53961585f3dc5ecd0171bc7dd9612966ccb53ef613345c0f78be6f4fb2fbf74.js, line 1: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: https://assets-cdn.github.com/assets/frameworks-b53961585f3dc5ecd0171bc7dd9612966ccb53ef613345c0f78be6f4fb2fbf74.js, line 1: String.prototype.contains() is deprecated and will be removed in a future release; use String.prototype.includes() instead
+JavaScript warning: https://assets-cdn.github.com/assets/frameworks-b53961585f3dc5ecd0171bc7dd9612966ccb53ef613345c0f78be6f4fb2fbf74.js, line 1: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create

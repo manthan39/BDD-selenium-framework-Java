@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -118,6 +119,8 @@ public class Homepage extends testBase   {
 	@FindBy(xpath="//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[4]/div/input")
 	WebElement FirstCheckbox;
 	
+	@FindBy(xpath="//input[@type='checkbox']")
+	List<WebElement> els;
 	
 	
 public Homepage(WebDriver driver){
@@ -262,7 +265,7 @@ public void SelectCountrythatIssued(){
 public void SelectVisaExpiry(){
 	/*String press = Keys.chord(Keys.SHIFT,Keys.ENTER); 
 	FirstCheckbox.sendKeys(press);*/
-	VisaExpiry.clear();
+	CountrythatIssued.sendKeys(Keys.TAB);
 	Select month = new Select(Monthdrpdwn);
 	month.selectByIndex(5);
 	Select day= new Select(daydrpdwn);
@@ -273,10 +276,12 @@ public void SelectVisaExpiry(){
 }
 
 public void clickcheckbox(){
-	List<WebElement> els = driver.findElements(By.xpath("//input[@type='checkbox']"));
+	//List<WebElement> els = driver.findElements(By.xpath("//input[@type='checkbox']"));
+	System.out.println("before for loop");
 	for ( WebElement el : els ) {
 	    if ( !el.isSelected() ) {
 	        el.click();
+	        System.out.println(el.getText());
 	    }
 	}
 }

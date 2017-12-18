@@ -1,22 +1,9 @@
 package Aavgo.Automation.HomePage;
 
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
-import org.jboss.netty.util.Timeout;
-import org.omg.CORBA.TIMEOUT;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -39,8 +26,10 @@ public class TC001_VerifyHomepage extends testBase  {
 	@BeforeClass
 	public  void setUp(){
 		
-		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
-		driver=new FirefoxDriver();
+		/*System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");*/
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
+		/*driver=new FirefoxDriver();*/
+		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://www.phptravels.net/");
 		
@@ -50,7 +39,7 @@ public class TC001_VerifyHomepage extends testBase  {
 	
 
 	
-	@Test(priority=1)
+	@Test
 	
 	@Parameters({"mailid","mobileNo","FirstName","LastName"})
 	
@@ -69,19 +58,19 @@ public class TC001_VerifyHomepage extends testBase  {
 		hmpage.selectGender();
 		hmpage.EnterpassportNumber();
 		hmpage.EnterpassportIssuedDetail();
-		//driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		hmpage.EnterpassportExpirationDetail();
 		hmpage.selectsupportingDoc();
 		hmpage.SelectCountrythatIssued();
-		hmpage.SelectVisaExpiry();
+	//	hmpage.SelectVisaExpiry();
 		hmpage.clickcheckbox();
 	
 	
-	}
 		
+	}
+	
 	 	
 	
-	//@AfterClass
+	@AfterClass
 	public  void endTest(){
 		driver.close();
 		

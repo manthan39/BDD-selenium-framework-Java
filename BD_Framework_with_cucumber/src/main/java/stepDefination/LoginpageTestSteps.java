@@ -35,6 +35,8 @@ public class LoginpageTestSteps extends testBase {
 		hmpage.EnterUsername_mandatory("angular");
 		Thread.sleep(2000);
 		hmpage.ClickonLoginBtn();
+		Thread.sleep(3000);
+		
 
 	}
 
@@ -42,7 +44,8 @@ public class LoginpageTestSteps extends testBase {
 	public void message_displayed_registration_Successfully() throws Throwable {
 		
 		try{
-		 /*hmpage.verifyLogoutBtnMsg();*/
+		 System.out.println(hmpage.verifyLogoutBtnMsg().contains("logged") + ":for Valid");
+//		 hmpage.ClickonLogoutBtn();
 	} catch (NoSuchElementException e) {
 	    System.out.println("Element Not Found");
 	}	 
@@ -62,7 +65,7 @@ public class LoginpageTestSteps extends testBase {
 	@Then("^Message displayed enter valid credentials$")
 	public void message_displayed_enter_valid_credentials() throws Throwable {
 	try{
-		/*hmpage.GetInvalidMsg();*/
+		System.out.println(hmpage.GetInvalidMsg().contains("is incorrect") + " :for Invalid");
 /*		Assert.assertEquals("test", "bug");
 */	} catch (NoSuchElementException e) {
 	    System.out.println("Element Not Found");

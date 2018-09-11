@@ -23,7 +23,7 @@ public class Homepage extends testBase {
 	@FindBy(xpath = IautoLocator.username_mandatory)
 	private WebElement username_mandatory1;
 
-	@FindBy(css = IautoLocator.loginBtn)
+	@FindBy(xpath = IautoLocator.loginBtn)
 	private WebElement LoginBtn;
 
 	@FindBy(xpath = IautoLocator.LogoutBtn)
@@ -47,8 +47,9 @@ public class Homepage extends testBase {
 		username_mandatory1.sendKeys(username_mandatory);
 	}
 
-	public void ClickonLoginBtn() {
+	public void ClickonLoginBtn() throws InterruptedException {
 		LoginBtn.click();
+		Thread.sleep(3000);
 	}
 
 	public void LoadUrl() {

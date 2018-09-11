@@ -66,9 +66,9 @@ public class CalculatorpageTestSteps extends testBase {
 	}
 	
 	@Then("^Close the Browser$")
-	public void close_the_Browser() throws Throwable {
+	public void close_the_Browser() {
 	 hmpage.CloseBrowser();
-	    throw new PendingException();
+	 
 	}
 	
 }

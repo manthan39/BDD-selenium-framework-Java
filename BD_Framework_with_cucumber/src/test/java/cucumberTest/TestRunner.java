@@ -1,6 +1,11 @@
 package cucumberTest;
 
+import java.io.File;
+
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+
+import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -13,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		strict = false,
-		plugin = { "pretty", "json:target/cucumber.json"}, 
+		plugin = {"pretty","html:target/cucumber-reports"}, 
 		tags = "@smoke, @regression" ,
 
 		// for json format
@@ -22,5 +27,6 @@ import cucumber.api.junit.Cucumber;
 		glue = { "stepDefination" }
 		)
 public class TestRunner {
+	
 
 }

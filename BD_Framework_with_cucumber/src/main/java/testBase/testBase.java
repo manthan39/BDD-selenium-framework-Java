@@ -35,6 +35,10 @@ public class testBase {
 					System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
 			// work with chrome browser Version 62.0.3202.94
 			driver = new ChromeDriver();
+	/*		System.setProperty("webdriver.gecko.driver",
+					  System.getProperty("user.dir") +
+					  "\\drivers\\geckodriver_new.exe");
+			driver = new FirefoxDriver();*/
 			driver.manage().window().maximize();
 		}
 		return driver;

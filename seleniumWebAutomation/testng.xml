@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="3" parallel="none" preserve-order="true">
+	<listeners>
+		<listener class-name="com.sentinel.listeners.ProjectListeners" />
+	</listeners>
+
+	<test name="Login Page test Cases" group-by-instances="true">
+		<groups>
+			<run>
+				<exclude name="Sprint1" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.sentinel.test.SignUpTestSuite" />
+		</classes>
+
+	</test> <!-- Test -->
+
+	<test name="Create facility Form Test Cases" group-by-instances="true">
+		<groups>
+			<run>
+				<exclude name="Sprint2" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.sentinel.test.CreateFacilityTestSuite" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Verify Address Functionality Test Cases"
+		group-by-instances="true">
+		<groups>
+			<run>
+				<exclude name="Sprint3" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="com.sentinel.test.VerifyFacilityListingAndCreateAddressTestSuite" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Verify Contact Functionality Test Cases"
+		group-by-instances="true">
+		<groups>
+			<run>
+				<exclude name="Sprint4" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.sentinel.test.AddContactWithLoginFunctionalityTestSuite" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Verify Department Management Functionality Test Cases"
+		group-by-instances="true">
+		<groups>
+			<run>
+				<exclude name="Sprint5" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.sentinel.test.DepartmentManagementTestSuite" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test name="Verify Create Corporate Test Cases"
+		group-by-instances="true">
+		<groups>
+			<run>
+				<include name="Sprint6" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.sentinel.test.CreateCorporateTestSuite" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.sentinel.listeners.ProjectListeners"/>
+  </listeners>
+  <test name="Create facility Form Test Cases(failed)">
+    <groups>
+      <run>
+        <include name="Release2"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.sentinel.test.CreateFacilityTestSuite">
+        <methods>
+          <include name="verifyFacilityCreateLayout"/>
+        </methods>
+      </class> <!-- com.sentinel.test.CreateFacilityTestSuite -->
+      <class name="com.sentinel.test.verifyFacilityListingAndCreateAddress">
+        <methods>
+          <include name="DriversetUp"/>
+          <include name="teardownTest"/>
+        </methods>
+      </class> <!-- com.sentinel.test.verifyFacilityListingAndCreateAddress -->
+    </classes>
+  </test> <!-- Create facility Form Test Cases(failed) -->
+</suite> <!-- Failed suite [Suite] -->

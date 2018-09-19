@@ -1,0 +1,34 @@
+06/09/2018 15:44:30 devpinoyLogger Project Path in Ide - D:\Project\Sentinel\SentinelProject 
+06/09/2018 15:44:33 devpinoyLogger STARTED CHROME BROWSER 
+06/09/2018 15:44:43 devpinoyLogger Navigated to base URL - http://ec2-13-229-128-214.ap-southeast-1.compute.amazonaws.com/auth 
+06/09/2018 15:44:43 devpinoyLogger 
+
+ 
+06/09/2018 15:44:43 devpinoyLogger -- SYSTEM INFORMATION -- 
+06/09/2018 15:44:43 devpinoyLogger Operating system Name - WINDOWS 10 
+06/09/2018 15:44:43 devpinoyLogger Operating system version - 10.0 
+06/09/2018 15:44:43 devpinoyLogger User working directory - D:\Project\Sentinel\SentinelProject 
+06/09/2018 15:44:43 devpinoyLogger Operating system architecture - amd64 
+06/09/2018 15:44:43 devpinoyLogger JRE version number - 1.8.0_131 
+06/09/2018 15:44:43 devpinoyLogger JRE vendor URL - http://java.oracle.com/ 
+06/09/2018 15:44:43 devpinoyLogger JRE vendor name - Oracle Corporation 
+06/09/2018 15:44:43 devpinoyLogger Installation directory for Java Runtime Environment (JRE) - C:\Program Files\Java\jre1.8.0_131 
+06/09/2018 15:44:43 devpinoyLogger Operating system Name - WINDOWS 10 
+06/09/2018 15:44:43 devpinoyLogger Operating system version - 10.0 
+06/09/2018 15:44:43 devpinoyLogger Testing Browser :- CHROME 
+06/09/2018 15:44:43 devpinoyLogger 
+			
+ -- PROJECT LOGS -- 
+ 
+06/09/2018 15:44:43 devpinoyLogger ----------------------------------------------------------------------------------------- 
+06/09/2018 15:44:43 devpinoyLogger TEST CASE STARTED - VERIFYFACILITYCREATELAYOUT 
+06/09/2018 15:44:43 devpinoyLogger ----------------------------------------------------------------------------------------- 
+06/09/2018 15:44:54 devpinoyLogger Navigated to 'Facility' page. 
+06/09/2018 15:45:01 devpinoyLogger Navigated to 'Create Corporate' page. 
+06/09/2018 15:45:06 devpinoyLogger Verified the Page Header with titles and breadcrum ... 
+06/09/2018 15:45:06 devpinoyLogger The No. of textboxes on UI are:-8 
+06/09/2018 15:45:15 devpinoyLogger Verified the Labels and Placeholders for buttons i.e,. 'Contact Email * , Contact Phone * , FAX , Tax ID , Website , ' 
+06/09/2018 15:45:17 devpinoyLogger Verified the Labels and Placeholders for dropdowns 
+06/09/2018 15:45:23 devpinoyLogger Verified the radio Buttons and  default Values displayed.. 
+06/09/2018 15:45:24 devpinoyLogger Verified the checkbox and date picker.. 
+06/09/2018 15:45:24 devpinoyLogger ----------------------------------------------------------------------------------------- 

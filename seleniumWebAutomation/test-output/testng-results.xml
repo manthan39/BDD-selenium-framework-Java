@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Navigated to 'Facility' page.<br>]]>
+    </line>
+    <line>
+      <![CDATA[Navigated to 'Create Corporate' page.<br>]]>
+    </line>
+    <line>
+      <![CDATA[Verified the Page Header with titles and breadcrum ...<br>]]>
+    </line>
+    <line>
+      <![CDATA[Verified the Labels and Placeholders for buttons i.e,. 'Contact Email * , Contact Phone * , FAX , Tax ID , Website , '<br>]]>
+    </line>
+    <line>
+      <![CDATA[Verified the Labels and Placeholders for dropdowns<br>]]>
+    </line>
+    <line>
+      <![CDATA[Verified the radio Buttons and  default Values displayed..<br>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="92302" started-at="2018-09-06T09:26:56Z" finished-at="2018-09-06T09:28:28Z">
+    <groups>
+      <group name="Sprint6">
+        <method signature="CreateCorporateTestSuite.verifyFacilityCreateLayout()[pri:1, instance:com.sentinel.test.CreateCorporateTestSuite@229f66ed]" name="verifyFacilityCreateLayout" class="com.sentinel.test.CreateCorporateTestSuite"/>
+      </group> <!-- Sprint6 -->
+    </groups>
+    <test name="Default test" duration-ms="92302" started-at="2018-09-06T09:26:56Z" finished-at="2018-09-06T09:28:28Z">
+      <class name="com.sentinel.test.CreateCorporateTestSuite">
+        <test-method status="PASS" signature="DriversetUp()[pri:0, instance:com.sentinel.test.CreateCorporateTestSuite@229f66ed]" name="DriversetUp" is-config="true" duration-ms="11911" started-at="2018-09-06T14:56:44Z" finished-at="2018-09-06T14:56:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DriversetUp -->
+        <test-method status="PASS" signature="verifyFacilityCreateLayout()[pri:1, instance:com.sentinel.test.CreateCorporateTestSuite@229f66ed]" name="verifyFacilityCreateLayout" duration-ms="92274" started-at="2018-09-06T14:56:56Z" description="Verifing All the page elements with position and default values." finished-at="2018-09-06T14:58:28Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Navigated to 'Facility' page.<br>]]>
+            </line>
+            <line>
+              <![CDATA[Navigated to 'Create Corporate' page.<br>]]>
+            </line>
+            <line>
+              <![CDATA[Verified the Page Header with titles and breadcrum ...<br>]]>
+            </line>
+            <line>
+              <![CDATA[Verified the Labels and Placeholders for buttons i.e,. 'Contact Email * , Contact Phone * , FAX , Tax ID , Website , '<br>]]>
+            </line>
+            <line>
+              <![CDATA[Verified the Labels and Placeholders for dropdowns<br>]]>
+            </line>
+            <line>
+              <![CDATA[Verified the radio Buttons and  default Values displayed..<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyFacilityCreateLayout -->
+        <test-method status="PASS" signature="teardownTest()[pri:0, instance:com.sentinel.test.CreateCorporateTestSuite@229f66ed]" name="teardownTest" is-config="true" duration-ms="793" started-at="2018-09-06T14:58:28Z" finished-at="2018-09-06T14:58:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownTest -->
+      </class> <!-- com.sentinel.test.CreateCorporateTestSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
